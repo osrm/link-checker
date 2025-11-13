@@ -1,0 +1,22 @@
+name: Check Markdown Links (404 only)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  check-urls:
+    name: Detect 404 Errors in Markdown Links
+    runs-on: ubuntu-latest
+    continue-on-error: true  # ✅ Don't fail CI
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set script permissions
+        run: chmod +x scripts/check_urls.sh
+
+      - name: Run 404 link check
+        run: ./scripts/check_urls.sh
