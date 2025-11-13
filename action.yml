@@ -1,6 +1,6 @@
 name: 'Link-checker'
 description: 'Check Markdown/MDX files for broken 404 links'
-author: 'yourname'
+author: 'osrm'
 branding:
   icon: 'link'
   color: 'blue'
