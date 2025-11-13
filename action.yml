@@ -1,0 +1,10 @@
+name: 'Link-checker'
+description: 'Check Markdown/MDX files for broken 404 links'
+author: 'yourname'
+branding:
+  icon: 'link'
+  color: 'blue'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
